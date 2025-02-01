@@ -134,7 +134,7 @@ EOF
 ```
 ```
 sudo systemctl daemon-reload
-sudo systemctl enable story story-geth
+sudo systemctl enable storyd story-geth
 ```
 ### 📝İnit
 NOT: node adınızı yazınız.
@@ -182,7 +182,7 @@ curl -o - -L http://37.120.189.81/story_dev/storygeth_snap.tar.lz4  | lz4 -c -d 
 ### 📝Başlatalım   
 ```
 sudo systemctl daemon-reload
-sudo systemctl restart story-geth && sleep 5 && sudo systemctl restart story
+sudo systemctl restart story-geth && sleep 5 && sudo systemctl restart storyd
 ```
 ### 📝Log
 ```
