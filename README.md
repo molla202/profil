@@ -74,7 +74,6 @@ cd story-geth
 make geth
 cp build/bin/geth $HOME/go/bin/
 source $HOME/.bash_profile
-mv $HOME/geth $HOME/go/bin/
 [ ! -d "$HOME/.story/story" ] && mkdir -p "$HOME/.story/story"
 [ ! -d "$HOME/.story/geth" ] && mkdir -p "$HOME/.story/geth"
 ```
