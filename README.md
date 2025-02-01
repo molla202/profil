@@ -109,7 +109,8 @@ Environment="UNSAFE_SKIP_BACKUP=true"
 Environment="DAEMON_DATA_BACKUP_DIR=$HOME/.story/story/data"
 ExecStart=$(which cosmovisor) run run
 --api-enable \
---api-address=0.0.0.0:${STORY_PORT}317
+--api-address=0.0.0.0:${STORY_PORT}317 \
+--network story
 Restart=always
 RestartSec=5s
 LimitNOFILE=65535
