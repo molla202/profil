@@ -174,6 +174,8 @@ SEEDS="327fb4151de9f78f29ff10714085e347a4e3c836@rpc.story.nodestake.org:666"
 PEERS="4761ef729f12b80b3652edd26bd45734b5ff4515@51.15.15.160:26656,30ce6b2ee08c7313a4ef14dbaef0cc6d6937bded@149.50.101.37:26656,22684dfc5f64dc355a1c68d0e4f7472d208caef9@95.216.243.177:26656,de39ffa62ec29003a892218e50e79935d89f1652@34.139.96.9:26656,1b69b89a871cb232300c8a980bfa1584ec1d8a3e@104.196.19.53:26656,1851180d526f7a4cfc5e391263869ba9d24bb8e7@35.211.255.251:26656,a352a98d79cd4b4d9dac83cf8fe1a69d95c81af7@35.211.57.155:26656"
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.story/story/config/config.toml
+
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+)false$|\1true|" /root/.story/story/config/story.toml
 ```
 ### 📝Snap
 ```
