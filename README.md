@@ -102,7 +102,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-Environment="DAEMON_NAME=story"
+Environment="DAEMON_NAME=storyd"
 Environment="DAEMON_HOME=$HOME/.story/story"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
 Environment="UNSAFE_SKIP_BACKUP=true"
