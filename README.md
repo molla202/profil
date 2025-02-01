@@ -139,7 +139,7 @@ sudo systemctl enable storyd story-geth
 ### 📝İnit
 NOT: node adınızı yazınız.
 ```
-storyd init $MONIKER --chain-id $STORY_CHAIN_ID
+storyd init $MONIKER --network $STORY_CHAIN_ID
 storyd config set client chain-id $STORY_CHAIN_ID
 storyd config set client node tcp://localhost:${STORY_PORT}657
 ```
