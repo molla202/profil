@@ -69,11 +69,17 @@ source $HOME/.bash_profile
 ```
 ```
 cd $HOME
-wget -O geth https://github.com/piplabs/story-geth/releases/download/v1.0.1/geth-linux-amd64
-chmod +x $HOME/geth
+git clone https://github.com/piplabs/story-geth
+cd story-geth
+make geth
+cp build/bin/geth $HOME/go/bin/
+source $HOME/.bash_profile
 mv $HOME/geth $HOME/go/bin/
 [ ! -d "$HOME/.story/story" ] && mkdir -p "$HOME/.story/story"
 [ ! -d "$HOME/.story/geth" ] && mkdir -p "$HOME/.story/geth"
+```
+```
+story-geth version
 ```
 ```
 mkdir -p $HOME/.story/story/cosmovisor/genesis/bin
